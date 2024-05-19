@@ -24,10 +24,10 @@
                     <li><a href="">Euroacs</a></li>
                     <li class="header__category"><a href="">Category</a>
                         <div class="category__container">
-                            <p class="category__text">Lorem,ipsum 1.</p>
-                            <p class="category__text">Lorem,ipsum 2.</p>
-                            <p class="category__text">Lorem,ipsum 3.</p>
-                            <p class="category__text">Lorem,ipsum 4.</p>
+                            <a href="" class="category__text">Lorem,ipsum 1.</a>
+                            <a href="" class="category__text">Lorem,ipsum 1.</a>
+                            <a href="" class="category__text">Lorem,ipsum 1.</a>
+                            <a href="" class="category__text">Lorem,ipsum 1.</a>
                         </div>
                     </li>
                     <li><a href="">Catalogue</a></li>
@@ -124,6 +124,8 @@
         </ul>
     </nav>
     <script>
+        const category = document.querySelector('.header__category')
+        const categoryList = document.querySelector('.category__container')
         const container = document.querySelector('.container')
         const hamburgerMenu = document.querySelector('.hamburger__menu')
         const mobileNavbar = document.querySelector('.mobile__navbar')
@@ -137,6 +139,12 @@
             mobileNavbar.style.display = "none"
             container.style.display = "block"
 
+        })
+        category.addEventListener('mouseover', () => {
+            categoryList.style.display = 'flex'
+        })
+        categoryList.addEventListener('mouseout', () => {
+            categoryList.style.display = 'none'
         })
 
 

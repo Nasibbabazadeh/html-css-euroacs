@@ -778,4 +778,13 @@ li a {
     padding: 20px 16px;
     border-radius: 9%;
   }
+  .tablet-frame::before {
+    content: "Yeni aksessuar kolleksiyası";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 1);
+    z-index: 1;
+    position: absolute;
+  }
 }
