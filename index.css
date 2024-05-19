@@ -338,6 +338,67 @@ li a {
   border: none;
   left: 20px;
 }
+/* home */
+.home__main {
+  height: 3120px;
+}
+.products__home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 0px 96px;
+}
+.main__frame-home {
+  width: 48%;
+  height: 760px;
+  border-radius: 40px;
+  background-color: rgba(233, 233, 233, 1);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.frame-img-home {
+  width: 100%;
+  height: 44%;
+  object-fit: contain;
+}
+.frame__text-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.frame-title-home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48.76px;
+}
+.frame-parag-home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29.26px;
+}
+.frame-home-img {
+  width: 100%;
+  height: 780px;
+  padding: 70px 96px;
+  object-fit: fill;
+}
+.mobile-home-responsive,
+.tablet-frame {
+  display: none;
+}
 
 @media (min-width: 360px) and (max-width: 767px) {
   .navigation,
@@ -528,6 +589,31 @@ li a {
     height: 28px;
     left: 5px;
   }
+  /* home */
+  .home-container {
+    height: 2200px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .home__main {
+    height: 100%;
+  }
+  .frame-home-img {
+    display: none;
+  }
+  .home-footer {
+    margin: 0;
+  }
+  .mobile-home-responsive {
+    display: block;
+    position: relative;
+    bottom: 120px;
+    width: 100%;
+    object-fit: contain;
+    padding: 20px 16px;
+    border-radius: 9%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .navigation,
@@ -673,5 +759,25 @@ li a {
     width: 200px;
     height: 300px;
     object-fit: contain;
+  }
+  /* home */
+  .mobile-home-responsive,
+  .frame-home-img {
+    display: none;
+  }
+  .home-container {
+    height: 1730px;
+  }
+  .home__main {
+    height: 1400px;
+  }
+  .tablet-frame {
+    display: block;
+    position: relative;
+    bottom: 120px;
+    width: 100%;
+    object-fit: contain;
+    padding: 20px 16px;
+    border-radius: 9%;
   }
 }

@@ -8,34 +8,12 @@
     <link rel="stylesheet" href="../index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./index.css">
+    <style></style>
 </head>
 
 <body>
-    <div class="container">
-        <!-- popup carousel -->
-        <div class="modal">
-            <div class="pop-up__container">
-                <button id="close-button"><img src="../assets/close-button.png" alt=""></button>
-                <button id="left-button" onclick="backSlider()"><img src="../assets/left-arrow.png" alt=""></button>
-                <button id="right-button" onclick="nextSlider()"><img src="../assets/right-arrow.png" alt=""></button>
-
-                <img src="../assets/applewatch.png" alt="" class="pop-up__img">
-                <div class="pop-up__text">
-                    <div class="pop-up__title">
-                        <p class="title__primary">Smart Watches</p>
-                        <p class="title__secondary">fill free in time</p>
-                    </div>
-                    <div class="pop-up__content">
-                        <p>Display Type: IPS</p>
-                        <p> Screen Resolution: 240*284</p>
-                        <p>Feature: Touch Screen, 4g, bluetooth</p>
-                        <p>Feature: Touch Screen, 4g, bluetooth</p>
-                        <p>Feature: Touch Screen, 4g, bluetooth</p>
-                        <p>Feature: Touch Screen, 4g, bluetooth</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container home-container">
         <!-- header -->
         <header class="container__header">
             <div class="first__row">
@@ -66,49 +44,55 @@
             </div>
         </header>
         <!-- main -->
-        <main class="container__main">
-            <div class="main__video">
+        <main class="container__main home__main">
+            <div class=" main__video">
                 <video src="https://euroacs.online/img/2830fa3784162764d2f15eb321cf0903.mp4" autoplay loop
                     class="video__frame"></video>
             </div>
+            <!-- frames -->
+            <img src="../assets/frame1.png" alt="" class="frame-home-img">
+            <img src="../assets/responsive-article.png" alt="" class="mobile-home-responsive">
+            <img src="../assets/tablet-frame.png" alt="" class="tablet-frame">
+            <!-- Products -->
             <h2 class="products__title">Məhsullar</h2>
-            <div class="products">
+            <div class="products products__home">
+                <div class="main__frame-home main__frame">
+                    <img src="../assets/speaker-euroacs1.png" alt="airpods" class="frame__img frame-img-home ">
+                    <div class="frame__text frame__text-home">
+                        <h3 class="frame__title frame-title-home">Listen Music</h3>
+                        <p class="frame__parag frame-parag-home">fill free </p>
+                        <h3 class="frame__title-small">Qulaqüstü
+                            qulaqlıq</h3>
+                        <p class="frame__parag-small">34 AZN-dən</p>
+                    </div>
 
-                <div class="main__frame-1 main__frame">
-                    <div class="frame__text">
-                        <h3 class="frame__title">Wireless earphones</h3>
-                        <p class="frame__parag">fill free in colors</p>
-                        <h3 class="frame__title-small">Qulaqüstü
-                            qulaqlıq</h3>
-                        <p class="frame__parag-small">34 AZN-dən</p>
-                    </div>
-                    <img src="../assets/blackairpods.png" alt="airpods" class="frame__img">
                 </div>
-                <div class="main__frame-2 main__frame">
-                    <img src="../assets/blackairpods.png" alt="airpods" class="frame__img">
-                    <div class="frame__text">
-                        <h3 class="frame__title">Wireless earphones</h3>
-                        <p class="frame__parag">fill free in colors</p>
+                <div class="main__frame-home main__frame">
+                    <img src="../assets/speaker-euroacs1.png" alt="airpods" class="frame__img frame-img-home">
+                    <div class="frame__text frame__text-home">
+                        <h3 class="frame__title frame-title-home">Listen Music</h3>
+                        <p class="frame__parag frame-parag-home">fill free </p>
                         <h3 class="frame__title-small">Qulaqüstü
                             qulaqlıq</h3>
                         <p class="frame__parag-small">34 AZN-dən</p>
                     </div>
                 </div>
-                <div class="main__frame-3 main__frame">
-                    <div class="frame__text">
-                        <h3 class="frame__title">Wireless earphones</h3>
-                        <p class="frame__parag">fill free in colors</p>
+                <div class="main__frame-home main__frame">
+                    <img src="../assets/speaker-euroacs1.png" alt="airpods" class="frame__img frame-img-home">
+                    <div class="frame__text frame__text-home">
+                        <h3 class="frame__title frame-title-home">Listen Music</h3>
+                        <p class="frame__parag frame-parag-home">fill free </p>
                         <h3 class="frame__title-small">Qulaqüstü
                             qulaqlıq</h3>
                         <p class="frame__parag-small">34 AZN-dən</p>
                     </div>
-                    <img src="../assets/blackairpods.png" alt="airpods" class="frame__img">
+
                 </div>
-                <div class="main__frame-4 main__frame">
-                    <img src="../assets/blackairpods.png" alt="airpods" class="frame__img">
-                    <div class="frame__text">
-                        <h3 class="frame__title">Wireless earphones</h3>
-                        <p class="frame__parag">fill free in colors</p>
+                <div class="main__frame-home main__frame">
+                    <img src="../assets/speaker-euroacs1.png" alt="airpods" class="frame__img frame-img-home">
+                    <div class="frame__text frame__text-home">
+                        <h3 class="frame__title frame-title-home">Listen Music</h3>
+                        <p class="frame__parag frame-parag-home">fill free </p>
                         <h3 class="frame__title-small">Qulaqüstü
                             qulaqlıq</h3>
                         <p class="frame__parag-small">34 AZN-dən</p>
@@ -116,7 +100,7 @@
                 </div>
             </div>
         </main>
-        <footer class="container__footer">
+        <footer class="container__footer home-footer">
             <div class="footer__copyright">
                 <img src="../assets/logo-black.png" alt="logo" class="footer__logo">
                 <p class="footer__copyright-text">© 2019-2024 Euroacs. Bütün hüquqlar qorunur.</p>
@@ -140,15 +124,10 @@
         </ul>
     </nav>
     <script>
-        const currentImg = document.querySelector(".pop-up__img");
-        const buttons = document.querySelectorAll('.frame__img')
-        const carousel = document.querySelector('.modal')
-        const closeButton = document.getElementById('close-button');
         const container = document.querySelector('.container')
         const hamburgerMenu = document.querySelector('.hamburger__menu')
         const mobileNavbar = document.querySelector('.mobile__navbar')
         const backNavbar = document.querySelector('.hamburger__menu-small')
-        const imagesArray = ["../assets/applewatch.png", "../assets/watch1.png", "../assets/group1.png", "../assets/group2.png"];
 
         hamburgerMenu.addEventListener('click', () => {
             container.style.display = "none"
@@ -160,31 +139,7 @@
 
         })
 
-        let number = 0;
-        function nextSlider() {
-            number++;
-            if (number >= imagesArray.length) {
-                number = 0;
-            }
-            currentImg.src = imagesArray[number];
-        }
-        function backSlider() {
-            number--;
-            if (number < 0) {
-                number = imagesArray.length - 1;
-            }
-            currentImg.src = imagesArray[number];
-        }
 
-
-        buttons.forEach(element => {
-            element.addEventListener('click', () => {
-                carousel.style.display = 'flex'
-            })
-        });
-        closeButton.addEventListener('click', () => {
-            carousel.style.display = 'none';
-        })
     </script>
 </body>
 
