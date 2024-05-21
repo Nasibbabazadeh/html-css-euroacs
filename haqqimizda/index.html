@@ -4,34 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Haqqımızda</title>
     <link rel="stylesheet" href="../index.css">
 </head>
 
 <body>
-    <header>
-        <img src="" alt="">
-        <button></button>
-    </header>
-    <main>
-        <h1>Haqqımızda</h1>
-        <p>2008-ci ildə əsası qoyulmuş Superfon şirkətinin əsas fəaliyyət istiqaməti Mobil Telefon, Aksesuar və
-            Ehtiyyat hissələrinin Azərbaycanın əksər şəhər və regionlar üzrə satışının həyata keçirilməsindən
-            ibarətdir.
-            <br> Baş ofis əlaqə məlumatları:
-            <br>Telefon: +994 51 205 88 88 Ünvan: Aşıq Molla Cümə küç., AZ1052, 44B,
-            Nərimanov rayonu, Bakı, Azərbaycan.
-            <br>E-mail:info@superfon.az
-        </p>
-    </main>
-    <footer>
-        <img src="" alt="">
-        <div>
-            <img src="" alt="">
-            <span>+994 51 205 88 88</span>
-        </div>
-        <p>© 2019-2024 Euroacs. Bütün hüquqlar qorunur.</p>
-    </footer>
+    <nav class="mobile__navbar">
+
+        <button class=" hamburger__menu-small"><img src="../assets/hamburger-icon.png" alt="icon"></button>
+        <ul class="mobile__listing">
+            <li><img src="../assets/logo.png" alt=""></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Category</a></li>
+            <li><a href="">Catalogue</a></li>
+            <li><span>en</span> <img src="../assets/polygon.png" alt="bottom-arrow"></li>
+        </ul>
+    </nav>
+    <div class="about__container">
+        <header class="about__header">
+            <img src="../assets/logo-about.png" alt="logo">
+            <button class="about__menu"><img src="../assets/top-bar.png" alt="hamburger-button"></button>
+        </header>
+        <main class="about__main">
+            <h1 class="about__content-header">Haqqımızda</h1>
+            <p class="about__content"> 2008-ci ildə əsası qoyulmuş Superfon şirkətinin əsas fəaliyyət istiqaməti Mobil
+                Telefon, Aksesuar və
+                Ehtiyyat hissələrinin Azərbaycanın əksər şəhər və regionlar üzrə satışının həyata keçirilməsindən
+                ibarətdir.
+                <br><br> Baş ofis əlaqə məlumatları:
+                <br><br>Telefon: +994 51 205 88 88 Ünvan: Aşıq Molla Cümə küç., AZ1052, 44B,
+                Nərimanov rayonu, Bakı, Azərbaycan.
+                <br><br>E-mail:info@superfon.az
+            </p>
+        </main>
+        <footer class="about__footer">
+            <img src="../assets/logo-about.png" alt="logo">
+            <div class=about__phone>
+                <img src="../assets/Call.png" alt="phone">
+                <span class="about__span">+994 51 205 88 88</span>
+            </div>
+            <p class="about__copyright">© 2019-2024 Euroacs. Bütün hüquqlar qorunur.</p>
+        </footer>
+    </div>
+    <script>
+        const container = document.querySelector('.about__container');
+        const hamburgerMenu = document.querySelector('.about__menu');
+        const mobileNavbar = document.querySelector('.mobile__navbar');
+        const backNavbar = document.querySelector('.hamburger__menu-small');
+
+        const toggleDisplay = (elem, display) => elem.style.display = display;
+
+        hamburgerMenu.addEventListener('click', () => {
+            toggleDisplay(container, "none");
+            toggleDisplay(mobileNavbar, "flex");
+        });
+
+        backNavbar.addEventListener('click', () => {
+            toggleDisplay(mobileNavbar, "none");
+            toggleDisplay(container, "block");
+        });
+    </script>
 </body>
 
 </html>
