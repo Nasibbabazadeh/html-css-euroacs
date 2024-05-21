@@ -12,7 +12,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
 .container {
   width: 100%;
   height: 100%;
@@ -72,7 +71,8 @@ li a {
 .frame__parag-small,
 .frame__title-small,
 .products__title,
-.hamburger__menu {
+.hamburger__menu,
+.img-text {
   display: none;
 }
 /* navbar hamburger */
@@ -294,6 +294,11 @@ li a {
   border-top: 0.5px solid rgba(203, 203, 203, 1);
   padding-top: 28px;
 }
+.pop-up__img {
+  width: 44%;
+  height: 82%;
+  object-fit: contain;
+}
 
 #right-button,
 #close-button,
@@ -452,15 +457,6 @@ li a {
     flex-direction: column;
     gap: 16px;
   }
-  .products__title {
-    position: relative;
-    bottom: 95px;
-    display: block;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 20px;
-    padding: 0px 16px;
-  }
   .main__frame {
     width: 100%;
     height: 291px;
@@ -537,6 +533,7 @@ li a {
     z-index: 1;
     position: relative;
   }
+
   .pop-up__text {
     width: 44%;
     height: 350px;
@@ -589,13 +586,29 @@ li a {
   }
   /* home */
   .home-container {
-    height: 2200px;
+    height: 100vh !important;
     display: flex;
     flex-direction: column;
     gap: 40px;
   }
   .home__main {
-    height: 100%;
+    height: 2200px;
+  }
+  .products__home {
+    position: relative;
+    top: 10px;
+  }
+  .products__home::before {
+    content: "Məhsullar";
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 1);
+  }
+  .products__home {
+    position: relative;
+    top: -50px;
   }
   .frame-home-img {
     display: none;
@@ -606,11 +619,44 @@ li a {
   .mobile-home-responsive {
     display: block;
     position: relative;
-    bottom: 120px;
+    bottom: 100px;
     width: 100%;
     object-fit: contain;
-    padding: 20px 16px;
+    padding: 0px 16px;
     border-radius: 9%;
+  }
+  .img-text {
+    position: absolute;
+    left: 40px;
+    top: 400px;
+    width: 171px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+    z-index: 1;
+  }
+  .img-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 1);
+  }
+  .img-content {
+    width: 147px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.65);
+  }
+  .home-footer {
+    position: relative;
+    bottom: 20px;
+  }
+  .home-phone {
+    position: absolute;
+    top: 70%;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -666,15 +712,6 @@ li a {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
-  }
-  .products__title {
-    position: relative;
-    bottom: 95px;
-    display: block;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 20px;
-    padding: 0px 16px;
   }
   .main__frame {
     width: 48%;
@@ -764,10 +801,20 @@ li a {
     display: none;
   }
   .home-container {
-    height: 1730px;
+    height: 1600px;
   }
   .home__main {
-    height: 1400px;
+    height: 80%;
+  }
+  .products__home::before {
+    content: "Məhsullar";
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: -35px;
   }
   .tablet-frame {
     display: block;
@@ -776,15 +823,31 @@ li a {
     width: 100%;
     object-fit: contain;
     padding: 20px 16px;
-    border-radius: 9%;
+    border-radius: 36px;
   }
-  .tablet-frame::before {
-    content: "Yeni aksessuar kolleksiyası";
+  .img-text {
+    position: absolute;
+    left: 40px;
+    top: 390px;
+    width: 186px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+    z-index: 1;
+  }
+
+  .img-title {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
     color: rgba(255, 255, 255, 1);
-    z-index: 1;
-    position: absolute;
+  }
+  .img-content {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.65);
   }
 }
