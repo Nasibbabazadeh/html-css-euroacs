@@ -13,16 +13,96 @@
 <body>
     <div class="container">
         <!-- popup carousel -->
-        <div class="modal">
+        <!-- modal 1 -->
+        <div class="modal" id="modal1">
             <div class="pop-up__container">
-                <button id="close-button"><img src="../assets/close-button.png" alt=""></button>
-                <button id="left-button" onclick="backSlider()"><img src="../assets/left-arrow.png" alt=""></button>
-                <button id="right-button" onclick="nextSlider()"><img src="../assets/right-arrow.png" alt=""></button>
+                <button id="close-button" onclick="closeModal('modal1')"><img src="../assets/close-button.png"
+                        alt=""></button>
+                <button class="left-button" id="left-button1"><img src="../assets/left-arrow.png" alt=""></button>
+                <button class="right-button" id="right-button1"><img src="../assets/right-arrow.png" alt=""></button>
 
-                <img src="../assets/applewatch.png" alt="" class="pop-up__img">
+                <img src="../assets/convertor.png" alt="" class="pop-up__img" id="modal1Image">
                 <div class="pop-up__text">
                     <div class="pop-up__title">
-                        <p class="title__primary">Smart Watches</p>
+                        <p class="title__primary">Modal 1 </p>
+                        <p class="title__secondary">fill free in time</p>
+                    </div>
+                    <div class="pop-up__content">
+                        <p>Display Type: IPS
+                            Screen Resolution: 240*284
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal 2 -->
+        <div class="modal" id="modal2">
+            <div class="pop-up__container">
+                <button id="close-button" onclick="closeModal('modal2')"><img src="../assets/close-button.png"
+                        alt=""></button>
+                <button class="left-button" id="left-button2"><img src="../assets/left-arrow.png" alt=""></button>
+                <button class="right-button" id="right-button2"><img src="../assets/right-arrow.png" alt=""></button>
+
+                <img src="../assets/bands.png" alt="" class="pop-up__img" id="modal2Image">
+                <div class="pop-up__text">
+                    <div class="pop-up__title">
+                        <p class="title__primary">Modal 2 </p>
+                        <p class="title__secondary">fill free in time</p>
+                    </div>
+                    <div class="pop-up__content">
+                        <p>Display Type: IPS
+                            Screen Resolution: 240*284
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal 3 -->
+        <div class="modal" id="modal3">
+            <div class="pop-up__container">
+                <button id="close-button" onclick="closeModal('modal3')"><img src="../assets/close-button.png"
+                        alt=""></button>
+                <button class="left-button" id="left-button3"><img src="../assets/left-arrow.png" alt=""></button>
+                <button class="right-button" id="right-button3"><img src="../assets/right-arrow.png" alt=""></button>
+
+                <img src="../assets/classic-watch.png" alt="" class="pop-up__img" id="modal3Image">
+                <div class="pop-up__text">
+                    <div class="pop-up__title">
+                        <p class="title__primary">Modal 3 </p>
+                        <p class="title__secondary">fill free in time</p>
+                    </div>
+                    <div class="pop-up__content">
+                        <p>Display Type: IPS
+                            Screen Resolution: 240*284
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                            Feature: Touch Screen, 4g, bluetooth <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal 4 -->
+        <div class="modal" id="modal4">
+            <div class="pop-up__container">
+                <button id="close-button" onclick="closeModal('modal4')"><img src="../assets/close-button.png"
+                        alt=""></button>
+                <button class="left-button" id="left-button4"><img src="../assets/left-arrow.png" alt=""></button>
+                <button class="right-button" id="right-button4"><img src="../assets/right-arrow.png" alt=""></button>
+
+                <img src="../assets/blackairpods.png" alt="" class="pop-up__img" id="modal4Image">
+                <div class="pop-up__text">
+                    <div class="pop-up__title">
+                        <p class="title__primary">Modal 4</p>
                         <p class="title__secondary">fill free in time</p>
                     </div>
                     <div class="pop-up__content">
@@ -142,15 +222,10 @@
     <script>
         const category = document.querySelector('.header__category')
         const categoryList = document.querySelector('.category__container')
-        const currentImg = document.querySelector(".pop-up__img");
-        const buttons = document.querySelectorAll('.frame__img')
-        const carousel = document.querySelector('.modal')
-        const closeButton = document.getElementById('close-button');
         const container = document.querySelector('.container')
         const hamburgerMenu = document.querySelector('.hamburger__menu')
         const mobileNavbar = document.querySelector('.mobile__navbar')
         const backNavbar = document.querySelector('.hamburger__menu-small')
-        const imagesArray = ["../assets/applewatch.png", "../assets/watch1.png", "../assets/group1.png", "../assets/group2.png"];
 
         hamburgerMenu.addEventListener('click', () => {
             container.style.display = "none"
@@ -167,33 +242,73 @@
         categoryList.addEventListener('mouseout', () => {
             categoryList.style.display = 'none'
         })
-
-
-        let number = 0;
-        function nextSlider() {
-            number++;
-            if (number >= imagesArray.length) {
-                number = 0;
-            }
-            currentImg.src = imagesArray[number];
-        }
-        function backSlider() {
-            number--;
-            if (number < 0) {
-                number = imagesArray.length - 1;
-            }
-            currentImg.src = imagesArray[number];
-        }
-
-
-        buttons.forEach(element => {
-            element.addEventListener('click', () => {
-                carousel.style.display = 'flex'
-            })
+        const images = document.querySelectorAll('.frame__img');
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => openModal(`modal${index + 1}`));
         });
-        closeButton.addEventListener('click', () => {
-            carousel.style.display = 'none';
-        })
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            const modals = ['modal1', 'modal2', 'modal3', 'modal4'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+        // images source array
+        const modal1Images = ["../assets/bands.png", "../assets/headphone.png", "../assets/convertor.png"];
+        const modal2Images = ["../assets/watch1.png", "../assets/qulaqciq.png", "../assets/convertor.png"];
+        const modal3Images = ["../assets/headphone.png", "../assets/kids-watch.png", "../assets/convertor.png"];
+        const modal4Images = ["../assets/Maskgroup.png", "../assets/headphone.png", "../assets/convertor.png"];
+
+        // next and prev slider
+        let currentImageIndex1 = 0;
+        let currentImageIndex2 = 0;
+        let currentImageIndex3 = 0;
+        let currentImageIndex4 = 0;
+        document.getElementById("right-button1").addEventListener("click", () => {
+            currentImageIndex1 = (currentImageIndex1 + 1) % modal1Images.length;
+            document.getElementById("modal1Image").src = modal1Images[currentImageIndex1];
+        });
+
+        document.getElementById("right-button2").addEventListener("click", () => {
+            currentImageIndex2 = (currentImageIndex2 + 1) % modal2Images.length;
+            document.getElementById("modal2Image").src = modal2Images[currentImageIndex2];
+        });
+        document.getElementById("right-button3").addEventListener("click", () => {
+            currentImageIndex3 = (currentImageIndex3 + 1) % modal3Images.length;
+            document.getElementById("modal3Image").src = modal3Images[currentImageIndex3];
+        });
+        document.getElementById("right-button4").addEventListener("click", () => {
+            currentImageIndex4 = (currentImageIndex4 + 1) % modal4Images.length;
+            document.getElementById("modal4Image").src = modal4Images[currentImageIndex4];
+        });
+        document.getElementById("left-button1").addEventListener("click", () => {
+            currentImageIndex1 = (currentImageIndex1 - 1 + modal1Images.length) % modal1Images.length;
+            document.getElementById("modal1Image").src = modal1Images[currentImageIndex1];
+        });
+        document.getElementById("left-button2").addEventListener("click", () => {
+            currentImageIndex2 = (currentImageIndex2 - 1 + modal2Images.length) % modal2Images.length;
+            document.getElementById("modal2Image").src = modal2Images[currentImageIndex2];
+        });
+        document.getElementById("left-button3").addEventListener("click", () => {
+            currentImageIndex3 = (currentImageIndex3 - 1 + modal3Images.length) % modal3Images.length;
+            document.getElementById("modal3Image").src = modal3Images[currentImageIndex3];
+        });
+        document.getElementById("left-button4").addEventListener("click", () => {
+            currentImageIndex4 = (currentImageIndex4 - 1 + modal4Images.length) % modal4Images.length;
+            document.getElementById("modal4Image").src = modal4Images[currentImageIndex4];
+        });
+
     </script>
 </body>
 

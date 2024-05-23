@@ -283,30 +283,27 @@ li a {
 .pop-up__content {
   width: 100%;
   height: 160px;
-  font-family: "Montserrat";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.5px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: start;
   border-top: 0.5px solid rgba(203, 203, 203, 1);
   padding-top: 28px;
 }
+.pop-up__content {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
 .pop-up__img {
   width: 44%;
-  height: 82%;
+  height: 100%;
   object-fit: contain;
 }
 
-#right-button,
+.right-button,
 #close-button,
-#left-button:hover {
+.left-button:hover {
   cursor: pointer;
 }
 
-#right-button {
+.right-button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -330,7 +327,7 @@ li a {
   right: 20px;
 }
 
-#left-button {
+.left-button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -643,14 +640,14 @@ li a {
     border-top: 1px solid rgba(203, 203, 203, 1);
     padding-top: 10px;
   }
-  #right-button {
+  .right-button {
     width: 28px;
     height: 28px;
     display: flex;
     right: 5px;
   }
 
-  #left-button {
+  .left-button {
     width: 28px;
     height: 28px;
     left: 5px;
