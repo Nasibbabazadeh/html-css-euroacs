@@ -144,7 +144,7 @@ li a {
     width: 100%;
     height: 734px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .frame__text {
@@ -168,15 +168,16 @@ li a {
     color: rgba(51, 51, 51, 1);
 }
 .frame__img {
-    width: 500px;
+    width: 44%;
     height: 550px;
-    object-fit: cover;
+    object-fit: contain;
     transition: all 0.4s;
     cursor: pointer;
 }
 .frame__img:hover {
     transform: scale(1.1);
 }
+
 /* footer */
 .container__footer {
     width: 100%;
@@ -688,7 +689,7 @@ li a {
     .img-text {
         position: absolute;
         left: 40px;
-        top: 400px;
+        top: 420px;
         width: 171px;
         height: 96px;
         display: flex;
@@ -711,8 +712,10 @@ li a {
         color: rgba(255, 255, 255, 0.65);
     }
     .home-footer {
-        position: relative;
-        bottom: 20px;
+        display: flex;
+    }
+    .home-copyright {
+        padding-bottom: 20px;
     }
     .home-phone {
         position: absolute;
